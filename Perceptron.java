@@ -23,7 +23,7 @@ public class Perceptron {
         return sum >= 0 ? 1 : 0;
     }
 
-    public void updateWeights(int input[], int err) {
+    private void updateWeights(int input[], int err) {
         // Delta rule
         for(int i = 0; i < input.length; i++) {
             weight[i] += learningRate * err * input[i];
